@@ -1,4 +1,4 @@
-# Task 0:
+ Task 0:
 A Python script that performs basic arithmetic operations with two predefined numbers.
 
 # Task 1:
