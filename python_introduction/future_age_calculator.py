@@ -1,4 +1,4 @@
-# Calculate a user's age in 2050 in python.
+# Calculate how old the user will be in a specific future year.
 current_age = int(input("How old are you? "))
 
 age = current_age + 27
