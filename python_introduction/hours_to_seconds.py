@@ -1,4 +1,4 @@
-# Converting a specific number of hours into seconds in python.
+# Converting a specific number of hours into seconds.
 hours = 2
 
 seconds = hours * 3600
