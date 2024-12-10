@@ -1,3 +1,4 @@
+# Perform basic arithmetic operations with two predefined numbers.
 number1 = 10
 number2 = 5
 
