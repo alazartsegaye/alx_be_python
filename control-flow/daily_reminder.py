@@ -1,7 +1,7 @@
 # Prompt user for task detail 
-task = input("Enter your task: ")
-priority = input("Priority (high/medium/low): ").strip().lower()
-time_bound = input("Is it time-bound? (yes/no): ").strip().lower()
+task = input("Enter the task discription: ")
+priority = input("Enter task's priority (high/medium/low): ").strip().lower()
+time_bound = input("Is the task time-bound? (yes/no): ").strip().lower()
 
 # Process the task based on priority
 match priority:
@@ -15,11 +15,8 @@ match priority:
 # Add a reminder if the task is time sensitive
 if time_bound == "yes":
     reminder += " that requires immediate attention."
+    print(f"Reminder: {reminder}") # Provide a customized reminder
 else:
     reminder += " Consider completing it when you have free time."
-
-# Provide a customized reminder
-print(reminder)
-
- 
+    print(f"Note: {reminder}") # Provide a customized reminder
 
