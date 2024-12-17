@@ -6,15 +6,15 @@ time_bound = input("Is it time-bound? (yes/no): ").strip().lower()
 # Process the task based on priority
 match priority:
     case "high":
-        reminder = f"{task} is a high priority,"
+        reminder = f"'{task}' is a high priority"
     case "medium":
-        reminder = f"{task} is a medium priority,"
+        reminder = f"'{task}' is a medium priority"
     case "low":
-        reminder = f"{task} is a low priority."
+        reminder = f"'{task}' is a low priority."
 
 # Add a reminder if the task is time sensitive
 if time_bound == "yes":
-    reminder += " requires immediate attention."
+    reminder += " that requires immediate attention."
 else:
     reminder += " Consider completing it when you have free time."
 
