@@ -24,3 +24,6 @@ class BankAccount:
 if __name__ == "__main__":
     account = BankAccount(100)
     account.display_balance()
+    account.deposit(50)
+    account.withdraw(30)
+    account.display_balance()
