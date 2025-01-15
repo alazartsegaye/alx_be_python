@@ -1,15 +1,12 @@
-def safe_divide(numerator, denominator) -> float:
+
+# robust_division_calculator.py
+
+def safe_divide(numerator, denominator):
     try:
-        numerator = float(numerator)
-        denominator = float(denominator)
-
-        division = numerator / denominator
-        return division
-    
-    except ZeroDivisionError:
-        return "can't divide by zero"
+        num = float(numerator)
+        den = float(denominator)
+        if den == 0:
+            return "Error: Cannot divide by zero."
+        return f"The result of the division is {num / den:.2f}"
     except ValueError:
-        return "Error: Error: Invalid input. Please enter numeric values for both numerator and denominator."
-
-if __name__ == "__main__":
-    safe_divide() 
+        return "Error: Please enter numeric values only."
