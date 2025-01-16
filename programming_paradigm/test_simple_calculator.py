@@ -25,12 +25,9 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.multiply(2, -4), -8)
         # Add more assertions to thoroughly test the add method.
 
-    def test_divide_by_zero(self):
-        """Test division by zero."""
-        self.assertEqual(self.calc.divide(10, 0), None)
-
-    def test_divide_valid(self):
-        """Test valid division."""
+    def test_divide(self):
+        """Test the division method."""
+        self.assertEqual(self.calc.divide(10, 0), "Error: can't divide by zero")
         self.assertEqual(self.calc.divide(10, 2), 5.0)
         self.assertEqual(self.calc.divide(9, 3), 3.0)
 
