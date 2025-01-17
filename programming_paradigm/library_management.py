@@ -9,32 +9,37 @@ class Book:
 
 class Library:
     def __init__(self):
+        self._books = []
 
-        self._books = [
-            Book(title="Brave New World",author="by Aldous Huxley"), 
-            Book(title="1984",author="by George Orwell")
-        ]
-    def Initial_list_of_available_books(self):
-        return f"Available books after setup:\n" + "\n".join(str(book) for book in self._books)
+    def add_book(self, book):
+        self._books.append(book)
 
-    def add_book(self):
-        new_book = Book()
-        self._books.append(new_book)
-
-    def check_out_book(self,title):
+    def check_out_book(self, title):
         for book in self._books:
-            if book.title == title and not book._is_checked_out:
-                book._is_checked_out = True
-                return f"Available books after checking out '{book.title}'."
-        return f"'{title}' is not available for checkout."
+            if book.title == title:
+                if book.check_out():
+                    print(f"'{title}' has been checked out.")
+                    return
+                else:
+                    print(f"'{title}' is already checked out.")
+                    return
+        print(f"'{title}' is not in the library.")
 
     def return_book(self, title):
         for book in self._books:
-            if book.title == title and book._is_checked_out:
-                book._is_checked_out = False
-                return f"You have returned '{book.title}'."
-        return f"'{title}' was not checked out."
+            if book.title == title:
+                if book.return_book():
+                    print(f"'{title}' has been returned.")
+                    return
+                else:
+                    print(f"'{title}' was not checked out.")
+                    return
+        print(f"'{title}' is not in the library.")
 
-    def list_checked_out_books(self):
-        checked_out_books = [str(book) for book in self._books if book._is_checked_out]
-        return "Checked out books:\n" + "\n".join(checked_out_books) if checked_out_books else "No books are currently checked out."
+    def list_available_books(self):
+        available_books = [book for book in self._books if book.is_available()]
+        if available_books:
+            for book in available_books:
+                print(f"{book.title} by {book.author}")
+        else:
+            print("No books are currently available.")
