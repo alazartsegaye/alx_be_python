@@ -44,4 +44,4 @@ class Circle(Shape):
         Calculate the area of the circle.
         Formula: π * radius^2
         """
-        return math.pi * self.radius**2
+        return math.pi * self.radius** 2
