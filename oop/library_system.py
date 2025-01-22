@@ -15,7 +15,7 @@ class Book:
         """
         return f"Book: {self.title} by {self.author}"
 
-class Ebook(Book):
+class EBook(Book):
     """
     Derived class representing an electronic book (EBook).
     """
