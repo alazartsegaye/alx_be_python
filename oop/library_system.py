@@ -30,7 +30,7 @@ class EBook(Book):
         """
         String representation of an EBook.
         """
-        return f"EBook: {self.title} by {self.author}, File size: {self.file_size}KB"
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 class PrintBook(Book):
     """
@@ -47,7 +47,7 @@ class PrintBook(Book):
         """
         String representation of a PrintBook.
         """
-        return f"PrintBook: {self.title} by {self.author}, Page count: {self.page_count}"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 class Library:
     """
